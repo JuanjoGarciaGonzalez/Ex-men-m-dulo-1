@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Formulario de contacto - Juanjo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- Estilos CSS Formoid -->
+	<link rel="stylesheet" href="formulario_contacto_files/formoid1/formoid-default-orange.css" type="text/css" />
+	<script type="text/javascript" src="formulario_contacto_files/formoid1/formoid-default-orange.js"></script>
+	<!-- Librería de JQuery -->
+	<script type="text/javascript" src="formulario_contacto_files/formoid1/jquery.min.js"></script>
+	<!-- Estilos propios -->
+	<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body class="blurBg-false" style="background-color:#aaff7f">
+
+	<h1 style="text-align: center;">Formulario de contacto - Juanjo</h1>
+
+	<!-- Start Formoid form-->
+
+	<form class="formoid-default-orange"
+		style="background-color:#FFFFFF;font-size:14px;font-family:'Trebuchet MS',Helvetica,sans-serif;color:#666666;max-width:480px;min-width:150px;margin-top: 50px;"
+		method="post" id="form-contactar" action="PHP/procesar_formulario.php">
+		<div class="title">
+			<h2>CONTACTAR</h2>
+		</div>
+
+		<div class="element-input" title="Introduce tu nombre"><label class="title">Nombre<span
+					class="required">*</span></label><input class="medium" type="text" name="nom" required="required" />
+		</div>
+
+		<div class="element-input" title="Introduce tus apellidos"><label class="title">Apellidos<span
+					class="required">*</span></label><input class="large" type="text" name="ape" required="required" />
+		</div>
+
+		<div class="element-radio" title="Introduce tu sexo"><label class="title">Sexo<span
+					class="required">*</span></label>
+			<div class="column column2"><label><input type="radio" name="sexo" value="Hombre"
+						required="required" /><span class="no-negrita">Hombre</span></label></div><span
+				class="clearfix"></span>
+			<div class="column column2"><label><input type="radio" name="sexo" value="Mujer" required="required" /><span
+						class="no-negrita">Mujer</span></label></div><span class="clearfix"></span>
+			<!-- Caja para mostrar los mensajes de error en los radiobuttons -->
+			<div id="messageBox"></div>
+		</div>
+
+		<div class="element-email" title="Introduce tu correo electrónico"><label class="title">Email<span
+					class="required">*</span></label><input class="large" type="email" name="email" value=""
+				required="required" />
+		</div>
+
+		<div class="element-select" title="Introduce tu ciudad"><label class="title">Ciudad<span
+					class="required">*</span></label>
+			<div class="medium"><span><select name="ciudad" required="required">
+
+						<option value="">Seleccionar</option>
+						<option value="Donostia">Donostia</option>
+						<option value="Bilbao">Bilbao</option>
+						<option value="Vitoria">Vitoria</option>
+					</select><i></i></span></div>
+		</div>
+
+		<div class="element-select" title="Introduce tu provincia"><label class="title">Provincia<span
+					class="required">*</span></label>
+			<div class="medium"><span><select name="provincia" required="required">
+
+						<option value="">Seleccionar</option>
+						<option value="Gipuzkoa">Gipuzkoa</option>
+						<option value="Bizkaia">Bizkaia</option>
+						<option value="Arava">Arava</option>
+					</select><i></i></span></div>
+		</div>
+
+		<div class="element-textarea" title="Escriba su consulta"><label class="title">Consulta<span
+					class="required">*</span></label><textarea class="medium" name="consulta" cols="20" rows="5"
+				required="required"></textarea>
+		</div>
+
+		<div class="submit"><input id="b1" type="submit" value="ENVIAR" /></div>
+
+
+	</form>
+	<!-- Stop Formoid form-->
+
+
+
+	<!-- Librería del plugin Validate de JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+		integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+	</script>
+	<!-- Mensajes de error en español -->
+	<script type="text/javascript"
+		src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
+	<!-- Funciones JS propios -->
+	<script src="JS/funciones.js"></script>
+
+</body>
+
+</html>

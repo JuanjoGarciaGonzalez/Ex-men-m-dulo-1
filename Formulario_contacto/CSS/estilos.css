@@ -1,0 +1,21 @@
+label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.no-negrita {
+    font-weight: normal;
+}
+
+textarea { 
+    resize:vertical;
+}
+
+/* Estilos para el mensaje de error de los label */
+label.error {
+    float: none;
+    color: red !important;
+    padding-left: .5em;
+    vertical-align: middle;
+    font-size: 12px;
+}

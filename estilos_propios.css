@@ -1,0 +1,88 @@
+
+/*estilos para hacer el mapa responsive*/
+.google-maps {
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+}
+.google-maps iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+/*fin del mapa responsive*/
+
+/*estilos para el tooltip*/
+label {
+    display: inline-block;
+    width: 5em;
+}
+/*fin estilos tooltip*/
+
+/*Estilos para la flecha arriba ancla*/
+#button {
+	display: inline-block; /*para poder darle dimensiones*/
+	/*botón cuadrado y esquinas redondeadas*/
+	background-color: #ff9800;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	margin: 30px;
+	/*vamos a fijar la flecha para que se muestre en el mismo sitio*/
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 1000; /* al poner en z-index un valor muy alto nos 
+	aseguramos que el botón siempre se coloca por encima de otros elementos*/
+
+	/*De manera predeterminada la flecha estará oculta*/
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#button:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#button:active {
+	background-color: #555;
+}
+
+/*Ahora añadimos el icono y elegimos un icono de la biblioteca Fontawesome
+ el icono en concreto es el Chevron Up*/
+ #button::after {
+ 	/*position: absolute;*/
+ 	content:  "\f077"; /*Chevron Up*/
+ 	font-family: FontAwesome;
+ 	font-weight: normal;
+ 	font-style: normal;
+ 	font-size: 2em;
+ 	line-height: 50px;
+ 	color: #fff;
+ }
+
+ /*Para hacer el botón flecha visible*/
+ #button.show {
+ 	opacity: 1;
+ 	visibility: visible;
+ }
+
+ @media (min-width: 500px){
+ 	#button {
+ 		margin: 30px;
+ 	}
+ }
+
+
+
+
+
+
+
+/*fin flecha arriba*/

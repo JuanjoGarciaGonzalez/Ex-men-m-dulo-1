@@ -1,0 +1,189 @@
+/* FUENTES PROPIAS */
+@font-face {
+    font-family: "fuente-1";
+    src: url("../fonts/Prototype.ttf") format("truetype"),
+        /*Para Chrome, Opera y Safari*/
+        url("../fonts/Prototype.woff") format("woff");
+    /*Para Internet Explorer*/
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "fuente-2";
+    src: url("../fonts/Lora-Regular.ttf") format("truetype"),
+        /*Para Chrome, Opera y Safari*/
+        url("../fonts/Lora-Regular.woff") format("woff");
+    /*Para Internet Explorer*/
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ENCABEZADOS DE LAS SECCIONES */
+.fuente-1 {
+    font-family: fuente-1 !important;
+}
+
+.modal,
+h3 {
+    font-family: fuente-2 !important;
+    font-style: italic !important;
+}
+
+/* MAPA RESPONSIVE */
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#enlace-cookies {
+    text-decoration: none;
+}
+
+/* ESTILOS PARA EL TOOLTIP */
+label {
+    display: inline-block;
+    width: 5em;
+}
+
+.color-texto {
+    color: #ff9800 !important;
+}
+
+.color-icono {
+    color: #ff9800 !important;
+}
+
+.color-boton {
+    background-color: #ff9800 !important;
+    border: none;
+}
+
+.btn:hover {
+    background-color: gold !important;
+}
+
+.texto-claro::before {
+    filter: blur(5px) !important;
+}
+
+.imagenes-redondeadas {
+    border: 5px solid #ff9800 !important;
+}
+
+.redes-sociales:hover {
+    background-color: #ff9800 !important;
+}
+
+/* .redes-sociales:visited{
+    background-color: #ff9800 !important;
+} */
+
+.boton-modal {
+    background-color: #ff9800 !important;
+}
+
+span.error {
+    color: #ff9800;
+    font-size: 0.8em;
+}
+
+.navbar-toggler:hover {
+    background-color: gold !important;
+}
+
+/* ESTILOS DEL HR DIVISOR */
+.divider {
+    display: flex;
+}
+
+.divider::after,
+.divider::before {
+    content: "";
+    flex: 1;
+}
+
+.estilo-hr {
+    align-items: stretch;
+    margin: 1em 0;
+    height: 2em;
+    line-height: 2em;
+    color: white;
+}
+
+.estilo-hr::after{
+    background: linear-gradient(to left, white, #ff9800);
+}
+
+.estilo-hr::before {
+   background: linear-gradient(to right, white, #ff9800);
+}
+
+.h3-form {
+    color: #ff9800 !important;
+    font-weight: bold !important;
+}
+
+/* ESTILOS PARA LA FLECHA ANCLA */
+#button {
+    display: inline-block;
+    background-color: #ff9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 10px;
+    /* VAMOS A FIJAR LA FLECHA PARA QUE SU POSICIÓN NO CAMBIE */
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    z-index: 1000;
+    /* CON ESTO NOS ASEGURAMOS DE QUE EL BOTON SE POSICIONA POR ENCIMA EN EJE Z RESPECTO A LOS DEMÁS ELEMENTOS */
+    /* INICIALMENTE LA FLECHA ESTARÁ OCULTA */
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+/* AHORA AÑADIMOS EL ICONO DE FONT AWESOME */
+#button::after {
+    content: "\f139";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+/* PARA HACER LA FLECHA-BOTÓN VISIBLE */
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 500px) {
+    #button {
+        margin: 30px;
+    }
+}
